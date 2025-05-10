@@ -25,7 +25,7 @@ jobs:
         fi
         
         echo "🔄 Procesando lista M3U..."
-        echo "#EXTM3U" > playlist.m3u
+        echo "#EXTM3U" > zaza.m3u
         awk '/^#EXTINF:/ {getline url; print $0 ORS url}' source.md >> playlist.m3u
         
         echo "✅ Procesamiento completado"
