@@ -8,23 +8,41 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Necesario para git diff funcione correctamente
 
     - name: Download and process M3U
       run: |
-        # Descargar el README original
-        curl -s -o source.md https://raw.githubusercontent.com/ARIEL0202/TV-PREMIUM/refs/heads/main/README.md
+        echo "⌛ Descargando fuente..."
+        if ! curl -s -o source.md https://raw.githubusercontent.com/ARIEL0202/TV-PREMIUM/refs/heads/main/README.md; then
+          echo "❌ Error al descargar el archivo fuente"
+          exit 1
+        fi
         
-        # Procesar para crear lista M3U válida
+        echo "🔄 Procesando lista M3U..."
         echo "#EXTM3U" > playlist.m3u
         awk '/^#EXTINF:/ {getline url; print $0 ORS url}' source.md >> playlist.m3u
+        
+        echo "✅ Procesamiento completado"
+        echo "📄 Muestra del archivo generado:"
+        head -n 4 playlist.m3u
+        echo "..."
 
     - name: Commit and push changes
       run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        git add playlist.m3u
-        git diff --quiet && git diff --staged --quiet || git commit -m "Actualizar lista M3U automáticamente"
-        git push
+        echo "🔍 Verificando cambios..."
+        if git diff --quiet --exit-code; then
+          echo "🔄 No hay cambios en la lista M3U"
+        else
+          echo "📌 Guardando cambios..."
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add playlist.m3u
+          git commit -m "🔄 Actualización automática M3U $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+          echo "✅ Cambios guardados exitosamente"
+        fi
