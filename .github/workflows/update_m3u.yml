@@ -1,0 +1,32 @@
+name: Update M3U List
+
+on:
+  schedule:
+    # Ejecuta diariamente a las 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Permite ejecución manual
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Download and process M3U
+      run: |
+        # Descarga el archivo README.md
+        curl -s -o source.md https://raw.githubusercontent.com/ARIEL0202/TV-PREMIUM/refs/heads/main/README.md
+        
+        # Extrae los enlaces M3U (ajusta este comando según el formato del README)
+        grep -Eo 'https?://[^ ]+\.m3u' source.md > playlist.m3u || echo "No se encontraron enlaces M3U"
+        
+        # Opcional: Si los enlaces están en otro formato, necesitarás otro procesamiento
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add playlist.m3u
+        git diff --quiet && git diff --staged --quiet || git commit -m "Actualizar lista M3U automáticamente"
+        git push
