@@ -36,7 +36,7 @@ jobs:
     - name: Commit and push changes
       run: |
         echo "🔍 Verificando cambios..."
-        if git diff --quiet --exit-code; then
+        if git diff --quiet --exit-code -- zaza.m3u; then  # ← Verifica SOLO zaza.m3u
           echo "🔄 No hay cambios en la lista M3U"
         else
           echo "📌 Guardando cambios..."
