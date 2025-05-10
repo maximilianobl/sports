@@ -2,10 +2,8 @@ name: Update M3U List
 
 on:
   schedule:
-    # Ejecuta diariamente a las 00:00 UTC
-    #- cron: '0 0 * * *'
-    - cron: '*/5 * * * *'
-  workflow_dispatch: # Permite ejecución manual
+    - cron: '*/5 * * * *'  # Cada 5 minutos
+  workflow_dispatch:       # Permite ejecución manual
 
 jobs:
   update:
@@ -16,13 +14,12 @@ jobs:
 
     - name: Download and process M3U
       run: |
-        # Descarga el archivo README.md
+        # Descargar el README original
         curl -s -o source.md https://raw.githubusercontent.com/ARIEL0202/TV-PREMIUM/refs/heads/main/README.md
         
-        # Extrae los enlaces M3U (ajusta este comando según el formato del README)
-        grep -Eo 'https?://[^ ]+\.m3u' source.md > playlist.m3u || echo "No se encontraron enlaces M3U"
-        
-        # Opcional: Si los enlaces están en otro formato, necesitarás otro procesamiento
+        # Procesar para crear lista M3U válida
+        echo "#EXTM3U" > playlist.m3u
+        awk '/^#EXTINF:/ {getline url; print $0 ORS url}' source.md >> playlist.m3u
 
     - name: Commit and push changes
       run: |
