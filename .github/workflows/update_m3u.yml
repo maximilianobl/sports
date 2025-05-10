@@ -3,7 +3,8 @@ name: Update M3U List
 on:
   schedule:
     # Ejecuta diariamente a las 00:00 UTC
-    - cron: '0 0 * * *'
+    #- cron: '0 0 * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Permite ejecución manual
 
 jobs:
