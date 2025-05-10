@@ -26,11 +26,11 @@ jobs:
         
         echo "🔄 Procesando lista M3U..."
         echo "#EXTM3U" > zaza.m3u
-        awk '/^#EXTINF:/ {getline url; print $0 ORS url}' source.md >> playlist.m3u
+        awk '/^#EXTINF:/ {getline url; print $0 ORS url}' source.md >> zaza.m3u
         
         echo "✅ Procesamiento completado"
         echo "📄 Muestra del archivo generado:"
-        head -n 4 playlist.m3u
+        head -n 4 zaza.m3u
         echo "..."
 
     - name: Commit and push changes
@@ -42,7 +42,7 @@ jobs:
           echo "📌 Guardando cambios..."
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add playlist.m3u
+          git add zaza.m3u
           git commit -m "🔄 Actualización automática M3U $(date +'%Y-%m-%d %H:%M:%S')"
           git push
           echo "✅ Cambios guardados exitosamente"
