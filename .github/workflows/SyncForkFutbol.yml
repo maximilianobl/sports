@@ -1,0 +1,26 @@
+name: Sync Fork for Futbol M3U
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # Ejecutar a las 10:00 AM UTC todos los días
+  workflow_dispatch:       # Permite ejecución manual
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Sync Fork
+      run: |
+        echo "🔄 Sincronizando fork..."
+        git remote add upstream https://github.com/la221o/sports.git
+        git fetch upstream
+        git checkout main
+        git merge upstream/main
+        git push origin main
+        echo "✅ Fork sincronizado exitosamente"
