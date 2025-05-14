@@ -18,7 +18,7 @@ jobs:
     - name: Sync Fork
       run: |
         echo "🔄 Sincronizando fork..."
-        git remote add upstream https://github.com/la221o/sports.git
+        git remote add upstream https://github.com/la22lo/sports.git
         git fetch upstream
         git checkout main
         git merge upstream/main
