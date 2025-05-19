@@ -45,8 +45,11 @@ https://dffgtrdb.vffddd.online:8880/bein1/index.m3u8
 #EXTINF:-1, ESPN 2 🇦🇷
 http://181.205.130.194:4000/play/a07i
 
-#EXTINF:-1, ESPN 2 🇦🇷
-http://190.60.37.118:4000/play/a048
+#EXTINF:-1, ELEVEN 1 🇵🇹
+https://stream.veo.buzz:6072/sport/ch1/ch1_1080.m3u8
+
+#EXTINF:-1, ELEVEN 1 🇵🇹
+https://stream.veo.buzz:6072/sport/ch1/adaptive.m3u8
 
 #EXTINF:-1, ELEVEN 2 🇵🇹
 https://stream.veo.buzz:6073/sport/ch2/adaptive.m3u8
@@ -55,9 +58,12 @@ https://stream.veo.buzz:6073/sport/ch2/adaptive.m3u8
 https://stream.veo.buzz:6073/sport/ch2/ch2_720.m3u8
 
 #EXTINF:-1, ELEVEN 3 🇵🇹
+https://stream.veo.buzz:6074/sport/ch3/ch3_720.m3u8
+
+#EXTINF:-1, ELEVEN 4 🇵🇹
 https://stream.veo.buzz:6075/sport/ch4/adaptive.m3u8
 
-#EXTINF:-1, ELEVEN 3 🇵🇹
+#EXTINF:-1, ELEVEN 4 🇵🇹
 https://stream.veo.buzz:6075/sport/ch4/ch4_720.m3u8
 
 #EXTINF:-1, ARENA SPORT PREMIUM 1 🇷🇸
@@ -90,8 +96,35 @@ http://pl.seetv.cc/play/1104/1E20008EF0CBB6F/video.m3u8
 #EXTINF:-1, Матч! 🇷🇺
 http://catchup.videoline.ru/match/tracks-v1a1/mono.m3u8
 
+#EXTINF:-1, Матч! 🇷🇺
+https://tv.movielab.pro/397/video.m3u8?token=a1482ee4e66b46d4eaa25cd70164d9ba869910e5-92de6ea78159a61c6c26b17de6bd8b5e-1747637717-1747551317
+
+#EXTINF:-1, Матч! 🇷🇺
+https://32tech0steam0dp01.org/test/matchtv/chunks.m3u8
+
+#EXTINF:-1, Матч! Футбол 1 HD 🇷🇺
+https://tv.movielab.pro/260/video.m3u8?token=bdc3439aa67c433022f4412ad54e90b1cd2ef09e-a1d69541788a9b3102291351de025ffb-1747637717-1747551317
+
+#EXTINF:-1, Матч! Футбол 2 HD 🇷🇺
+https://tv.movielab.pro/271/video.m3u8?token=f3bece2bb79482d4660b58acf440622ca5cb3408-ddcb97c9278efe488d2b7c56bd596637-1747637717-1747551317
+
 #EXTINF:-1, Матч! Футбол 3 HD 🇷🇺
 http://185.57.68.33/110/mpegts
+
+#EXTINF:-1, Матч! Футбол 3 HD 🇷🇺
+http://185.57.68.33:8091/110/playlist.m3u8
+
+#EXTINF:-1, Матч! Футбол 3 HD 🇷🇺
+https://tv.movielab.pro/329/video.m3u8?token=740a63852b882f81716fc6cafed32f849c10fa2e-727c345f30eb93b2b225d9cbf36dc412-1747637717-1747551317
+
+#EXTINF:-1, SETANTA SPORT 1 🇷🇺
+https://tv.movielab.pro/942/video.m3u8?token=fac34e822dc732a8eb3d9b7251e582bc51d0d791-ff6115b9c69cc000a384780a87ab8b8e-1747637717-1747551317
+
+#EXTINF:-1, SETANTA SPORT 2 🇷🇺
+https://tv.movielab.pro/943/video.m3u8?token=64b321bf1302816a9756528852b3c6e85d9afa31-ae30c82d174c6a90324b8d558694bfe3-1747637717-1747551317
+
+#EXTINF:-1, SETANTA SPORT 🇰🇿
+https://tv.movielab.pro/5094/video.m3u8?token=450da3a76b1cdb16970b05455c8c9824e6226aec-a6ca6ab14a989f9f37f51d47cec39002-1747637717-1747551317
 
 #EXTINF:-1, SUPERSPORT 2 🇦🇱
 https://stream.veo.buzz:6074/sport/ch3/ch3_1080.m3u8
@@ -159,6 +192,42 @@ http://116.202.237.33:8080/CNLS3/tracks-v1a1a2a3l1l2/mono.m3u8?token=ef1c6f27da4
 #EXTINF:-1, CANAL + SPORT 2 🇫🇷
 http://116.202.237.33:8080/CNLS2/tracks-v1a1a2a3l1l2/mono.m3u8?token=ef1c6f27da4b04de8c97b52b9255617b
 
+#EXTINF:-1, DAZN 1 🇩🇪
+https://32tech0steam0dp01.org/live/DE_DAZN1/chunks.m3u8
+
+#EXTINF:-1, ESPN VIVO 🇨🇴
+http://190.60.56.41:8000/play/a00z/index.m3u8
+
+#EXTINF:-1, ESPN VIVO 🇨🇴
+http://190.60.37.118:4000/play/a00g
+
+#EXTINF:-1, ESPN 2 🇨🇴
+http://190.60.37.118:4000/play/a048
+
+#EXTINF:-1, ESPN 3 🇨🇴
+http://190.60.37.118:4000/play/a02y
+
+#EXTINF:-1, ESPN 4 🇨🇴
+http://190.60.37.118:4000/play/a02x
+
+#EXTINF:-1, ESPN 5 🇨🇴
+http://190.60.37.118:4000/play/a02m
+
+#EXTINF:-1, ESPN 5 🇨🇴
+http://190.60.56.41:8000/play/a00p/index.m3u8
+
+#EXTINF:-1, ESPN 6 🇨🇴
+http://190.60.37.118:4000/play/a02z
+
+#EXTINF:-1, ESPN 7 🇨🇴
+http://190.60.37.118:4000/play/a09j
+
+#EXTINF:-1, FOX SPORT 🇨🇴
+http://190.61.117.35:8000/play/a05n
+
+#EXTINF:-1, CARACOL TV 🇨🇴
+http://181.78.14.26:8000/play/a00d
+
 #EXTINF:-1,TV1 🇪🇸
 https://rtvelivestream.akamaized.net/rtvesec/la1/la1_main_dvr.m3u8
 
@@ -170,6 +239,9 @@ https://ztnr.rtve.es/ztnr/1688885.m3u8
 
 #EXTINF:-1,TELEDEPORTE 🇪🇸
 https://rtvelivestream-clnx.rtve.es/rtvesec/tdp/tdp_main.m3u8
+
+#EXTINF:-1,TELEDEPORTE 🇪🇸
+https://32tech0steam0dp01.org/live/ES_TeledeporteHD/chunks.m3u8
 
 #EXTINF:-1,EUROSPORT 1 🇪🇸
 http://185.189.225.157/EuroSport1/index.m3u8
@@ -240,6 +312,9 @@ http://78.130.250.2:8023/play/a02o/index.m3u8
 #EXTINF:-1, SPORTYTV 🇨🇿
 https://dash2.antik.sk/live/sporty_tv/index.m3u8
 
+#EXTINF:-1, viju+ Sport 🇷🇺
+http://109.200.130.123:7537/play/a03b
+
 #EXTINF:-1, SPORT RU 🇷🇺
 http://streaming.astrakhan.ru/astrakhanrusporthd/tracks-v3a1/index.m3u8
 
@@ -251,6 +326,9 @@ http://95.67.12.81:10625
 
 #EXTINF:-1, Суспільне Спорт 🇷🇺
 http://95.67.12.81:10625
+
+#EXTINF:-1, o2 Cпорт 🇷🇺
+http://45.143.108.110:4200/o2
 
 #EXTINF:-1, Turkmenistan Sport 🇹🇲
 https://alpha.tv.online.tm/legacyhls/ch004_720/index.m3u8
